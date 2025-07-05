@@ -3,7 +3,7 @@ import hashlib
 import uuid
 import boto3
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.secret_key = 'super-secret-key'
 
 # -------- Mock Data --------
@@ -172,6 +172,6 @@ def logout():
     #html += "</ul>"
     #return html
 
-if _name_ == '__main__':
+if __name__ == '__main__':
     print("🚀 Mock MovieMagic running at http://127.0.0.1:5000")
     app.run(debug=True, host='0.0.0.0', port=5000)
